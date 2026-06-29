@@ -562,6 +562,18 @@ nav ul {
     font-size: 0.9rem;
 }
 
+.exp-description {
+    color: var(--color-text-muted);
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+.exp-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 24px;
+}
+
 .tech-list {
     list-style-type: square;
     padding-left: 20px;
