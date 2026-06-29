@@ -1,0 +1,117 @@
+stages:
+  - build
+  - deploy
+  - test
+
+.pnpm:
+  image: node:latest
+  before_script:
+    - echo $CI_PROJECT_NAME
+    - echo $CI_PAGES_DOMAIN
+    - echo $CI_PAGES_HOSTNAME
+    - echo $CI_PAGES_URL
+    - node --version
+    - npm --version
+    - wget -qO- https://get.pnpm.io/install.sh | ENV="$HOME/.bashrc" SHELL="$(which bash)" bash -
+    - source $HOME/.bashrc
+    - pnpm --version
+    - pnpm config set store-dir .pnpm-store
+    - pnpm install
+  cache:
+    key:
+      files:
+        - pnpm-lock.yaml
+    paths:
+      - .pnpm-store
+
+.rye:
+  image: python:3.12
+  before_script:
+    - curl -sSf https://rye.astral.sh/get | RYE_INSTALL_OPTION="--yes" bash
+    - source "$HOME/.rye/env"
+    - rye sync
+  cache:
+    key:
+      files:
+        - requirements-dev.lock
+        - requirements.lock
+    paths:
+      - .venv
+
+build-slides:
+  stage: build
+  extends: .pnpm
+  script:
+    - pnpm run build:gitlab-pages
+    - cp -R slides/001-slides-nombres/dist public/001-nombres
+    - cp -R slides/002-slides-logique/dist public/002-logique
+    - cp -R slides/003-slides-calculabilite/dist public/003-calculabilite
+    - cp -R slides/004-slides-algorithmique/dist public/004-algorithmique
+    - cp -R slides/005-slides-cryptographie-introduction/dist public/005-cryptographie-introduction
+    - cp -R slides/006-slides-cryptographie-moderne/dist public/006-cryptographie-moderne
+  cache:
+    paths:
+      - .turbo/cache
+      - slides/001-slides-nombres/dist
+      - slides/002-slides-logique/dist
+      - slides/003-slides-calculabilite/dist
+      - slides/004-slides-algorithmique/dist
+      - slides/005-slides-cryptographie-introduction/dist
+      - slides/006-slides-cryptographie-moderne/dist
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == "deploy-slides"
+
+pages:
+  stage: deploy
+  needs: ["build-slides"]
+  script:
+    - echo "Deploying to GitLab Pages"
+  rules:
+    - if: $CI_COMMIT_BRANCH == "deploy-slides"
+
+build-ctest-arithmatoy:
+  extends: .rye
+  image: archlinux
+  stage: build
+  script:
+    - pacman -Syu --noconfirm base-devel gdb valgrind git cmake curl unzip tar zip
+    - rye run arithmatoy setup
+    - rye run arithmatoy ctest
+  artifacts:
+    paths:
+      - .local/cmake/
+  cache:
+    - key: vcpkg
+      paths:
+        - .local/vcpkg
+    - key: cmake
+      paths:
+        - .local/cmake
+
+pytest-arithmatoy:
+  extends: .rye
+  stage: test
+  needs: ["build-ctest-arithmatoy"]
+  script:
+    - rye run pytest -k test_arithmatoy
+
+pytest-tp-nombres:
+  extends: .rye
+  stage: test
+  script:
+    - rye run pytest apps/tp-nombres
+
+pytest-turingtoy:
+  extends: .rye
+  stage: test
+  script:
+    - rye run pytest apps/turingtoy
+
+pytest-cryptoy:
+  extends: .rye
+  stage: test
+  script:
+    - rye run pytest apps/cryptoy

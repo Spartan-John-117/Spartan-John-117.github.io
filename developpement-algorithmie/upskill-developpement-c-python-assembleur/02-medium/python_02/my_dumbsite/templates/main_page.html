@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message d'accueil Flask</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        h1 {
+            color: #3498db;
+        }
+        p {
+            color: #2c3e50;
+        }
+        .links a {
+            text-decoration: none;
+            color: #3498db;
+            font-size: 18px;
+            margin: 10px;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{ message }}</h1>
+    <p>Merci d'utiliser Flask pour vos projets !</p>
+
+    <div class="links">
+        <p><a href="{{ url_for('add_user') }}">Ajouter un utilisateur</a></p>
+        <p><a href="{{ url_for('list_user') }}">Liste des utilisateurs</a></p>
+        <p><a href="{{ url_for('show_user', one_id=1) }}">Afficher un utilisateur (ID 1)</a></p>
+    </div>
+</body>
+</html>
+

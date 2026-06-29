@@ -1,0 +1,12 @@
+loadinta 1
+caststra
+call fun
+call fun
+call fun
+
+syscall 0 ; sysexit
+
+; fonction classique
+fun:
+    syscall 1 ; sysecho
+    ret

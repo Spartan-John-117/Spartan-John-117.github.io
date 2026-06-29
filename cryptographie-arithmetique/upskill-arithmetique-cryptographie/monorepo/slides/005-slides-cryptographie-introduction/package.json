@@ -1,0 +1,17 @@
+{
+  "name": "005-slides-cryptographie-introduction",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev --open",
+    "export": "slidev export",
+    "build:gitlab-pages": "slidev build --base /005-cryptographie-introduction/"
+  },
+  "dependencies": {
+    "@slidev/cli": "^51.8.1",
+    "@slidev/theme-default": "latest",
+    "@slidev/theme-seriph": "latest",
+    "vue": "^3.5.16"
+  }
+}

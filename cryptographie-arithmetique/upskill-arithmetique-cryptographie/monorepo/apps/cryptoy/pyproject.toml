@@ -1,0 +1,27 @@
+[project]
+name = "cryptoy"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Celeborn2BeAlive", email = "laurent.noel.c2ba@gmail.com" }
+]
+dependencies = [
+    "names>=0.3.0",
+    "cryptography>=45.0.3",
+]
+readme = "README.md"
+requires-python = ">= 3.12"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/cryptoy"]

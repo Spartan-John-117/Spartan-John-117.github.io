@@ -1,0 +1,16 @@
+; test de boucle
+
+loadstra "test de boucle\n"
+syscall 1 ; sysecho
+loadinta 1
+mov_ca
+loop:
+    pusha
+    caststra
+    syscall 1 ; sysecho
+    popb
+    add_abc
+    loadintb 5
+    cmp_ab
+    jlt loop
+syscall 0 ; sysexit

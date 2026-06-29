@@ -1,0 +1,391 @@
+[0KRunning with gitlab-runner 18.5.0 (bda84871)[0;m
+[0K  on gitlab-runner-docker-1-pedago j1U4krVVd, system ID: r_0RzsRsn11hoe[0;m
+section_start:1776504833:prepare_executor
+[0K[0K[36;1mPreparing the "docker" executor[0;m[0;m
+[0KUsing Docker executor with image artifactory.int.ecole2600.com:443/docker-dev/sentinel_workshop_secchi-exos-1 ...[0;m
+[0KUsing effective pull policy of [always] for container artifactory.int.ecole2600.com:443/docker-dev/sentinel_workshop_secchi-exos-1[0;m
+[0KAuthenticating with credentials from $DOCKER_AUTH_CONFIG[0;m
+[0KPulling docker image artifactory.int.ecole2600.com:443/docker-dev/sentinel_workshop_secchi-exos-1 ...[0;m
+[0KUsing docker image sha256:7e6056ae6205fb60d6b37e79b6c7971044a01de5289540a3430ebb4ab613bded for artifactory.int.ecole2600.com:443/docker-dev/sentinel_workshop_secchi-exos-1 with digest artifactory.int.ecole2600.com:443/docker-dev/sentinel_workshop_secchi-exos-1@sha256:7e6056ae6205fb60d6b37e79b6c7971044a01de5289540a3430ebb4ab613bded ...[0;m
+section_end:1776504834:prepare_executor
+[0Ksection_start:1776504834:prepare_script
+[0K[0K[36;1mPreparing environment[0;m[0;m
+[0KUsing effective pull policy of [always] for container sha256:94f5b630eb49cc959a0927cf74febcdd2520d232af2e8bef947a55800a725ccd[0;m
+Running on runner-j1u4krvvd-project-5492-concurrent-0 via gitlab-runner-docker-1-pedago...
+section_end:1776504835:prepare_script
+[0Ksection_start:1776504835:get_sources
+[0K[0K[36;1mGetting source from Git repository[0;m[0;m
+[32;1mGitaly correlation ID: 01KPFZ10NJ2CY6876WC210S90T[0;m
+[32;1mFetching changes with git depth set to 20...[0;m
+Initialized empty Git repository in /builds/promo2027/kevin.monmouton_repo/secchi-exos-1/.git/
+[32;1mCreated fresh repository.[0;m
+[32;1mChecking out d5bbdcc6 as detached HEAD (ref is master)...[0;m
+
+[32;1mSkipping Git submodules setup[0;m
+section_end:1776504836:get_sources
+[0Ksection_start:1776504836:step_script
+[0K[0K[36;1mExecuting "step_script" stage of the job script[0;m[0;m
+[0KUsing effective pull policy of [always] for container artifactory.int.ecole2600.com:443/docker-dev/sentinel_workshop_secchi-exos-1[0;m
+[0KUsing docker image sha256:7e6056ae6205fb60d6b37e79b6c7971044a01de5289540a3430ebb4ab613bded for artifactory.int.ecole2600.com:443/docker-dev/sentinel_workshop_secchi-exos-1 with digest artifactory.int.ecole2600.com:443/docker-dev/sentinel_workshop_secchi-exos-1@sha256:7e6056ae6205fb60d6b37e79b6c7971044a01de5289540a3430ebb4ab613bded ...[0;m
+[32;1m$ export PARENT=$(basename $(cd $CI_PROJECT_DIR/..; pwd))[0;m
+[32;1m$ export DIRNAME=(${PARENT//_repo/ })[0;m
+[32;1m$ export LOGIN=${DIRNAME[0]}[0;m
+[32;1m$ mkdir -p /home/sentinel/repository/$LOGIN[0;m
+[32;1m$ mv $CI_PROJECT_DIR/* /home/sentinel/repository/$LOGIN[0;m
+[32;1m$ cd /home/sentinel/env && pytest . && correction-junit[0;m
+
+---------------------------- live log sessionstart -----------------------------
+2026-04-18 09:33:57 [    INFO] <class '_pytest._py.path.LocalPath'> /home/sentinel/env (conftest.py:69)
+2026-04-18 09:33:57 [    INFO] FOUND CORRECTION.JSON LOADED IT: /home/sentinel/env/corrector.json (conftest.py:81)
+2026-04-18 09:33:57 [    INFO] ADD LOGIN DEPOSIT (conftest.py:84)
+2026-04-18 09:33:57 [    INFO] PLACEHOLDER (conftest.py:37)
+2026-04-18 09:33:57 [    INFO] CHECK current.txt (conftest.py:41)
+2026-04-18 09:33:57 [    INFO] PLCHLD /home/sentinel/repository /home/sentinel/batch (conftest.py:90)
+2026-04-18 09:33:57 [    INFO] REFDEP /home/sentinel/batch (conftest.py:96)
+2026-04-18 09:33:57 [    INFO] MOVE? False (conftest.py:102)
+2026-04-18 09:33:57 [    INFO] LINKDIR? False (conftest.py:103)
+2026-04-18 09:33:57 [    INFO] SYMLINK /home/sentinel/batch/chiffre_applique to /home/sentinel/env/chiffre_applique (conftest.py:105)
+GRADELOG INIT GRADE kevin.monmouton!!!
+GRADEDB: /home/sentinel/env/grade.db
+GRADEXML: /home/sentinel/env/grade.xml
+_INIT: <sqlite3.Connection object at 0x7f59dc06cf40>
+2026-04-18 09:33:57 [    INFO] FILES <corrector.logins.LoginDeposit object at 0x7f59dc22f3b0> (conftest.py:116)
+2026-04-18 09:33:57 [    INFO] CREATE INSTANCE LOGINS (logins.py:472)
+2026-04-18 09:33:57 [    INFO] GET LIST LOGIN (logins.py:481)
+2026-04-18 09:33:57 [    INFO] LOGINS: [] (logins.py:484)
+2026-04-18 09:33:57 [    INFO] GET LIST LOGIN (logins.py:481)
+2026-04-18 09:33:57 [    INFO] LOGINS: [<corrector.logins.LoginDeposit object at 0x7f59dc22f3b0>] (logins.py:484)
+2026-04-18 09:33:57 [    INFO] AFTER ADD LOGIN: [<corrector.logins.LoginDeposit object at 0x7f59dc22f3b0>] (conftest.py:120)
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.3, pluggy-1.5.0
+rootdir: /home/sentinel/env
+configfile: pytest.ini
+----------------------------- live log collection ------------------------------
+2026-04-18 09:33:57 [ WARNING] WARN: GENERATE TESTS ['tmp_path_factory', 'login', 'tmpdir', 'tmp_path', 'request'] (conftest.py:174)
+2026-04-18 09:33:57 [    INFO] GEN FIXTURES login METAFUNC <_pytest.python.Metafunc object at 0x7f59dc22eb10> (conftest.py:177)
+2026-04-18 09:33:57 [    INFO] GET LIST LOGIN (logins.py:481)
+2026-04-18 09:33:57 [    INFO] LOGINS: [<corrector.logins.LoginDeposit object at 0x7f59dc22f3b0>] (logins.py:484)
+2026-04-18 09:33:57 [    INFO] PARAM LOGIN kevin.monmouton (conftest.py:183)
+2026-04-18 09:33:57 [    INFO] REF_PATH <_pytest.python.Metafunc object at 0x7f59dc22eb10> (conftest.py:186)
+2026-04-18 09:33:57 [    INFO] T <class '_pytest.python.Metafunc'> (conftest.py:187)
+2026-04-18 09:33:57 [    INFO] P /home/sentinel/env/chiffre_applique/correction_chiffrement.py (conftest.py:189)
+2026-04-18 09:33:57 [    INFO] P /home/sentinel/env/chiffre_applique (conftest.py:190)
+2026-04-18 09:33:57 [    INFO] P /home/sentinel/env (conftest.py:191)
+2026-04-18 09:33:57 [    INFO] P /home/sentinel/batch/chiffre_applique/correction_chiffrement.py (conftest.py:192)
+2026-04-18 09:33:57 [    INFO] P /home/sentinel/batch/chiffre_applique (conftest.py:193)
+2026-04-18 09:33:57 [    INFO] P /home/sentinel/batch (conftest.py:194)
+2026-04-18 09:33:57 [    INFO] PORGIN /home/sentinel/batch/chiffre_applique (conftest.py:195)
+2026-04-18 09:33:57 [    INFO] RELPATH /home/sentinel/batch/chiffre_applique (conftest.py:200)
+2026-04-18 09:33:57 [    INFO] LEN 1 1 (conftest.py:204)
+RAWLOG RUNTEST PROTO <Function correction_exo[kevin.monmouton]> <class '_pytest.python.Function'>
+RAWLOG FORKED RUN REPORT ITEM <Function correction_exo[kevin.monmouton]>
+RAWLOG forked run report item <class '_pytest.python.Function'>
+collected 1 item
+2026-04-18 09:33:57 [    INFO] SPAWN PROCESS IN CONFTEST 18 (conftest.py:64)
+RAWLOG RUN FORKED <Function correction_exo[kevin.monmouton]>
+-------------------------------- live log call ---------------------------------
+2026-04-18 09:33:57 [    INFO] TREE /tmp/pytest-of-root/pytest-0/correction_exo_kevin_monmouton0
+└── chiffre_applique
+    ├── chiffrement.py
+    └── simple_test.py
+
+2 directories, 2 files
+ (logins.py:239)
+2026-04-18 09:33:57 [    INFO] /tmp/pytest-of-root/pytest-0/correction_exo_kevin_monmouton0
+└── chiffre_applique
+    ├── chiffrement.py
+    ├── exo1.py
+    ├── ref_chiffrement.py
+    ├── simple_test.py
+    └── test.py
+
+2 directories, 5 files
+ (logins.py:281)
+
+chiffre_applique/correction_chiffrement.py::correction_exo[kevin.monmouton] PASSED [100%]RAWLOG DAEMON IN 19
+---------------------------- live log sessionfinish ----------------------------
+2026-04-18 09:33:59 [    INFO] END SESSION <Session  exitstatus=0 testsfailed=0 testscollected=1> (conftest.py:126)
+2026-04-18 09:33:59 [    INFO] WAIT END OF FORKS (conftest.py:128)
+2026-04-18 09:33:59 [    INFO] SYNC MULTIPROC [<Process name='Process-1' pid=19 parent=18 stopped exitcode=0>] (conftest.py:133)
+2026-04-18 09:33:59 [    INFO] SYNC DEL [<Process name='Process-1' pid=19 parent=18 stopped exitcode=0>] (conftest.py:137)
+2026-04-18 09:33:59 [    INFO] SYNC BREAK (conftest.py:141)
+2026-04-18 09:33:59 [    INFO] CONFTEST ACQ LOCK (conftest.py:153)
+2026-04-18 09:33:59 [    INFO] CONFTEST LOG > /home/sentinel/env/grade.db (conftest.py:162)
+INIT GRADE kevin.monmouton!!!
+RUNTEST PROTO <Function correction_exo[kevin.monmouton]> <class '_pytest.python.Function'>
+FORKED RUN REPORT ITEM <Function correction_exo[kevin.monmouton]>
+forked run report item <class '_pytest.python.Function'>
+RUN FORKED <Function correction_exo[kevin.monmouton]>
+TEST CORRECTION
+SUBMISSION WORKING DIR /tmp/pytest-of-root/pytest-0/correction_exo_kevin_monmouton0
+SUBMISSION CURRENT DIR /tmp/pytest-of-root/pytest-0/correction_exo_kevin_monmouton0
+SRC PATH /home/sentinel/repository/kevin.monmouton
+WHITLIST ['*.py']
+LOAD_SUBMISSION COPYTREE /home/sentinel/repository/kevin.monmouton/chiffre_applique/*.py in /tmp/pytest-of-root/pytest-0/correction_exo_kevin_monmouton0
+CHECK GLOBBING *.py
+HANDLE GLOBBING /home/sentinel/repository/kevin.monmouton/chiffre_applique ||| *.py
+CHECK /home/sentinel/repository/kevin.monmouton/chiffre_applique/chiffrement.py
+COPY /home/sentinel/repository/kevin.monmouton/chiffre_applique/chiffrement.py
+CHECK /home/sentinel/repository/kevin.monmouton/chiffre_applique/simple_test.py
+COPY /home/sentinel/repository/kevin.monmouton/chiffre_applique/simple_test.py
+FINISH
+TREE PATH DIR /home/sentinel/repository/kevin.monmouton/chiffre_applique:
+/home/sentinel/repository/kevin.monmouton/chiffre_applique
+├── chiffrement.py
+├── simple_test.py
+└── subject.fr.md
+
+1 directory, 3 files
+
+TREE WORKING DIR /tmp/pytest-of-root/pytest-0/correction_exo_kevin_monmouton0:
+/tmp/pytest-of-root/pytest-0/correction_exo_kevin_monmouton0
+└── chiffre_applique
+    ├── chiffrement.py
+    └── simple_test.py
+
+2 directories, 2 files
+
+CHECK FILE /tmp/pytest-of-root/pytest-0/correction_exo_kevin_monmouton0/chiffre_applique/chiffrement.py
+FOR LOGIN kevin.monmouton ON chiffre_applique SET GRADE push_code: True File found
+INSERT
+LOAD FROM /home/sentinel/batch/chiffre_applique/additional_files
+LOAD_FROM COPYTREE /home/sentinel/batch/chiffre_applique/additional_files/*.py in /tmp/pytest-of-root/pytest-0/correction_exo_kevin_monmouton0
+CHECK GLOBBING *.py
+HANDLE GLOBBING /home/sentinel/batch/chiffre_applique/additional_files ||| *.py
+CHECK /home/sentinel/batch/chiffre_applique/additional_files/ref_chiffrement.py
+COPY /home/sentinel/batch/chiffre_applique/additional_files/ref_chiffrement.py
+CHECK /home/sentinel/batch/chiffre_applique/additional_files/exo1.py
+COPY /home/sentinel/batch/chiffre_applique/additional_files/exo1.py
+CHECK /home/sentinel/batch/chiffre_applique/additional_files/test.py
+COPY /home/sentinel/batch/chiffre_applique/additional_files/test.py
+FINISH
+TREE REF DIR /home/sentinel/batch/chiffre_applique/additional_files:
+/home/sentinel/batch/chiffre_applique/additional_files
+├── exo1.py
+├── ref_chiffrement.py
+└── test.py
+
+1 directory, 3 files
+
+WORK /tmp/pytest-of-root/pytest-0/correction_exo_kevin_monmouton0:
+/tmp/pytest-of-root/pytest-0/correction_exo_kevin_monmouton0
+└── chiffre_applique
+    ├── chiffrement.py
+    ├── exo1.py
+    ├── ref_chiffrement.py
+    ├── simple_test.py
+    └── test.py
+
+2 directories, 5 files
+
+CHANGEDIR /tmp/pytest-of-root/pytest-0/correction_exo_kevin_monmouton0/chiffre_applique
+total 32
+-rw-rw-rw- 1 root root  3305 Apr 18 09:33 chiffrement.py
+-rwxr-xr-x 1 root root  2369 Apr 18 09:33 exo1.py
+-rw-rw-r-- 1 root root  3278 Apr 18 09:33 ref_chiffrement.py
+-rw-rw-rw- 1 root root  1703 Apr 18 09:33 simple_test.py
+-rwxr-xr-x 1 root root 16243 Apr 18 09:33 test.py
+
+INIT GRADE kevin.monmouton!!!
+FOR LOGIN kevin.monmouton ON chiffre_applique SET GRADE check_hash_message: True OK
+INSERT
+INIT GRADE kevin.monmouton!!!
+FOR LOGIN kevin.monmouton ON chiffre_applique SET GRADE check_rsa_new: True OK
+INSERT
+INIT GRADE kevin.monmouton!!!
+FOR LOGIN kevin.monmouton ON chiffre_applique SET GRADE check_PKCS1_v1_5_sig_check: True OK
+INSERT
+INIT GRADE kevin.monmouton!!!
+FOR LOGIN kevin.monmouton ON chiffre_applique SET GRADE check_if_you_copied_build_message: True OK
+INSERT
+INIT GRADE kevin.monmouton!!!
+FOR LOGIN kevin.monmouton ON chiffre_applique SET GRADE check_compute_phi_d: True OK
+INSERT
+INIT GRADE kevin.monmouton!!!
+FOR LOGIN kevin.monmouton ON chiffre_applique SET GRADE check_compute_sp_sq_qinv: True OK
+INSERT
+INIT GRADE kevin.monmouton!!!
+FOR LOGIN kevin.monmouton ON chiffre_applique SET GRADE check_sig_crt: True OK
+INSERT
+INIT GRADE kevin.monmouton!!!
+FOR LOGIN kevin.monmouton ON chiffre_applique SET GRADE check_sig_crt_faulted: True OK
+INSERT
+INIT GRADE kevin.monmouton!!!
+FOR LOGIN kevin.monmouton ON chiffre_applique SET GRADE check_bellcore_1: True OK
+INSERT
+INIT GRADE kevin.monmouton!!!
+FOR LOGIN kevin.monmouton ON chiffre_applique SET GRADE check_bellcore_2: True OK
+INSERT
+INIT GRADE kevin.monmouton!!!
+FOR LOGIN kevin.monmouton ON chiffre_applique SET GRADE check_found_priv_key_with_bellcore_1: True OK
+INSERT
+INIT GRADE kevin.monmouton!!!
+FOR LOGIN kevin.monmouton ON chiffre_applique SET GRADE check_found_priv_key_with_bellcore_2: True OK
+INSERT
+OUTPUT PROG GRADEDB: /home/sentinel/env/grade.db
+GRADEXML: /home/sentinel/env/grade.xml
+_INIT: <sqlite3.Connection object at 0x7f456ad17790>
+GRADEDB: /home/sentinel/env/grade.db
+GRADEXML: /home/sentinel/env/grade.xml
+_INIT: <sqlite3.Connection object at 0x7fe40a29f790>
+GRADEDB: /home/sentinel/env/grade.db
+GRADEXML: /home/sentinel/env/grade.xml
+_INIT: <sqlite3.Connection object at 0x7f0c5f7cf790>
+GRADEDB: /home/sentinel/env/grade.db
+GRADEXML: /home/sentinel/env/grade.xml
+_INIT: <sqlite3.Connection object at 0x7faa4cb53790>
+GRADEDB: /home/sentinel/env/grade.db
+GRADEXML: /home/sentinel/env/grade.xml
+_INIT: <sqlite3.Connection object at 0x7f7799ff3790>
+GRADEDB: /home/sentinel/env/grade.db
+GRADEXML: /home/sentinel/env/grade.xml
+_INIT: <sqlite3.Connection object at 0x7fbae9e7f790>
+GRADEDB: /home/sentinel/env/grade.db
+GRADEXML: /home/sentinel/env/grade.xml
+_INIT: <sqlite3.Connection object at 0x7f0312413790>
+GRADEDB: /home/sentinel/env/grade.db
+GRADEXML: /home/sentinel/env/grade.xml
+_INIT: <sqlite3.Connection object at 0x7f0184047790>
+GRADEDB: /home/sentinel/env/grade.db
+GRADEXML: /home/sentinel/env/grade.xml
+_INIT: <sqlite3.Connection object at 0x7f48596e3790>
+GRADEDB: /home/sentinel/env/grade.db
+GRADEXML: /home/sentinel/env/grade.xml
+_INIT: <sqlite3.Connection object at 0x7f0093b3b790>
+GRADEDB: /home/sentinel/env/grade.db
+GRADEXML: /home/sentinel/env/grade.xml
+_INIT: <sqlite3.Connection object at 0x7fab71ceb790>
+GRADEDB: /home/sentinel/env/grade.db
+GRADEXML: /home/sentinel/env/grade.xml
+_INIT: <sqlite3.Connection object at 0x7f599213f790>
+ / ERR GRADELOG INIT GRADE kevin.monmouton!!!
+GRADELOG FOR LOGIN kevin.monmouton ON chiffre_applique SET GRADE check_hash_message: True OK
+GRADELOG INSERT
+GRADELOG INIT GRADE kevin.monmouton!!!
+GRADELOG FOR LOGIN kevin.monmouton ON chiffre_applique SET GRADE check_rsa_new: True OK
+GRADELOG INSERT
+GRADELOG INIT GRADE kevin.monmouton!!!
+GRADELOG FOR LOGIN kevin.monmouton ON chiffre_applique SET GRADE check_PKCS1_v1_5_sig_check: True OK
+GRADELOG INSERT
+GRADELOG INIT GRADE kevin.monmouton!!!
+GRADELOG FOR LOGIN kevin.monmouton ON chiffre_applique SET GRADE check_if_you_copied_build_message: True OK
+GRADELOG INSERT
+GRADELOG INIT GRADE kevin.monmouton!!!
+GRADELOG FOR LOGIN kevin.monmouton ON chiffre_applique SET GRADE check_compute_phi_d: True OK
+GRADELOG INSERT
+GRADELOG INIT GRADE kevin.monmouton!!!
+GRADELOG FOR LOGIN kevin.monmouton ON chiffre_applique SET GRADE check_compute_sp_sq_qinv: True OK
+GRADELOG INSERT
+GRADELOG INIT GRADE kevin.monmouton!!!
+GRADELOG FOR LOGIN kevin.monmouton ON chiffre_applique SET GRADE check_sig_crt: True OK
+GRADELOG INSERT
+GRADELOG INIT GRADE kevin.monmouton!!!
+GRADELOG FOR LOGIN kevin.monmouton ON chiffre_applique SET GRADE check_sig_crt_faulted: True OK
+GRADELOG INSERT
+GRADELOG INIT GRADE kevin.monmouton!!!
+GRADELOG FOR LOGIN kevin.monmouton ON chiffre_applique SET GRADE check_bellcore_1: True OK
+GRADELOG INSERT
+GRADELOG INIT GRADE kevin.monmouton!!!
+GRADELOG FOR LOGIN kevin.monmouton ON chiffre_applique SET GRADE check_bellcore_2: True OK
+GRADELOG INSERT
+GRADELOG INIT GRADE kevin.monmouton!!!
+GRADELOG FOR LOGIN kevin.monmouton ON chiffre_applique SET GRADE check_found_priv_key_with_bellcore_1: True OK
+GRADELOG INSERT
+GRADELOG INIT GRADE kevin.monmouton!!!
+GRADELOG FOR LOGIN kevin.monmouton ON chiffre_applique SET GRADE check_found_priv_key_with_bellcore_2: True OK
+GRADELOG INSERT
+
+DAEMON IN 19
+2026-04-18 09:33:59 [    INFO] CONFTEST RESULT > /home/sentinel/env/grade.db (conftest.py:164)
+1|1|chiffre_applique|1|push_code|File found
+2|1|chiffre_applique|1|check_hash_message|OK
+3|1|chiffre_applique|1|check_rsa_new|OK
+4|1|chiffre_applique|1|check_PKCS1_v1_5_sig_check|OK
+5|1|chiffre_applique|1|check_if_you_copied_build_message|OK
+6|1|chiffre_applique|1|check_compute_phi_d|OK
+7|1|chiffre_applique|1|check_compute_sp_sq_qinv|OK
+8|1|chiffre_applique|1|check_sig_crt|OK
+9|1|chiffre_applique|1|check_sig_crt_faulted|OK
+10|1|chiffre_applique|1|check_bellcore_1|OK
+11|1|chiffre_applique|1|check_bellcore_2|OK
+12|1|chiffre_applique|1|check_found_priv_key_with_bellcore_1|OK
+13|1|chiffre_applique|1|check_found_priv_key_with_bellcore_2|OK
+
+============================ no tests ran in 2.04s =============================
+RAWLOG GEN /home/sentinel/env/grade.xml
+RAWLOG XML TODO 1:chiffre_applique:1:push_code:File found
+RAWLOG XML TODO 1:chiffre_applique:1:check_hash_message:OK
+RAWLOG XML TODO 1:chiffre_applique:1:check_rsa_new:OK
+RAWLOG XML TODO 1:chiffre_applique:1:check_PKCS1_v1_5_sig_check:OK
+RAWLOG XML TODO 1:chiffre_applique:1:check_if_you_copied_build_message:OK
+RAWLOG XML TODO 1:chiffre_applique:1:check_compute_phi_d:OK
+RAWLOG XML TODO 1:chiffre_applique:1:check_compute_sp_sq_qinv:OK
+RAWLOG XML TODO 1:chiffre_applique:1:check_sig_crt:OK
+RAWLOG XML TODO 1:chiffre_applique:1:check_sig_crt_faulted:OK
+RAWLOG XML TODO 1:chiffre_applique:1:check_bellcore_1:OK
+RAWLOG XML TODO 1:chiffre_applique:1:check_bellcore_2:OK
+RAWLOG XML TODO 1:chiffre_applique:1:check_found_priv_key_with_bellcore_1:OK
+RAWLOG XML TODO 1:chiffre_applique:1:check_found_priv_key_with_bellcore_2:OK
+RAWLOG <?xml version="1.0" ?>
+<testsuites disabled="0" errors="0" failures="0" tests="12" time="0.0">
+	<testsuite disabled="0" errors="0" failures="0" name="TestSuite for kevin.monmouton" skipped="0" tests="12" time="0">
+		<testcase name="check_hash_message" classname="chiffre_applique">
+			<system-out>OK</system-out>
+		</testcase>
+		<testcase name="check_rsa_new" classname="chiffre_applique">
+			<system-out>OK</system-out>
+		</testcase>
+		<testcase name="check_PKCS1_v1_5_sig_check" classname="chiffre_applique">
+			<system-out>OK</system-out>
+		</testcase>
+		<testcase name="check_if_you_copied_build_message" classname="chiffre_applique">
+			<system-out>OK</system-out>
+		</testcase>
+		<testcase name="check_compute_phi_d" classname="chiffre_applique">
+			<system-out>OK</system-out>
+		</testcase>
+		<testcase name="check_compute_sp_sq_qinv" classname="chiffre_applique">
+			<system-out>OK</system-out>
+		</testcase>
+		<testcase name="check_sig_crt" classname="chiffre_applique">
+			<system-out>OK</system-out>
+		</testcase>
+		<testcase name="check_sig_crt_faulted" classname="chiffre_applique">
+			<system-out>OK</system-out>
+		</testcase>
+		<testcase name="check_bellcore_1" classname="chiffre_applique">
+			<system-out>OK</system-out>
+		</testcase>
+		<testcase name="check_bellcore_2" classname="chiffre_applique">
+			<system-out>OK</system-out>
+		</testcase>
+		<testcase name="check_found_priv_key_with_bellcore_1" classname="chiffre_applique">
+			<system-out>OK</system-out>
+		</testcase>
+		<testcase name="check_found_priv_key_with_bellcore_2" classname="chiffre_applique">
+			<system-out>OK</system-out>
+		</testcase>
+	</testsuite>
+</testsuites>
+
+GRADEDB: /home/sentinel/env/grade.db
+GRADEXML: /home/sentinel/env/grade.xml
+HERE /home/sentinel/env
+_INIT: <sqlite3.Connection object at 0x7fc2aec09f30>
+[32;1m$ cp grade.db $CI_PROJECT_DIR[0;m
+[32;1m$ cp grade.xml $CI_PROJECT_DIR[0;m
+section_end:1776504839:step_script
+[0Ksection_start:1776504839:upload_artifacts_on_success
+[0K[0K[36;1mUploading artifacts for successful job[0;m[0;m
+[32;1mUploading artifacts...[0;m
+grade.db: found 1 matching artifact files and directories[0;m 
+grade.xml: found 1 matching artifact files and directories[0;m 
+Uploading artifacts as "archive" to coordinator... 201 Created[0;m  correlation_id[0;m=01KPFZ17TE0XN83K41SZP46C7F id[0;m=252807 responseStatus[0;m=201 Created token[0;m=64_ybJ5yx
+[32;1mUploading artifacts...[0;m
+grade.xml: found 1 matching artifact files and directories[0;m 
+Uploading artifacts as "junit" to coordinator... 201 Created[0;m  correlation_id[0;m=01KPFZ18275WJG3BSKKKF4GEXN id[0;m=252807 responseStatus[0;m=201 Created token[0;m=64_ybJ5yx
+section_end:1776504840:upload_artifacts_on_success
+[0Ksection_start:1776504840:cleanup_file_variables
+[0K[0K[36;1mCleaning up project directory and file based variables[0;m[0;m
+section_end:1776504841:cleanup_file_variables
+[0K[32;1mJob succeeded[0;m

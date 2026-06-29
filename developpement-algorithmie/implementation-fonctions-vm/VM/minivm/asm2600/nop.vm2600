@@ -1,0 +1,7 @@
+; rien
+
+loadstra "nop ne fait rien\n"
+nop
+syscall 1 ; sysecho
+nop
+syscall 0 ; sysexit

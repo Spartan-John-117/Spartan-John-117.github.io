@@ -1,0 +1,11 @@
+.slidev-layout {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.slidev-layout h1 + p {
+  opacity: 1;
+  margin-top: 0.0rem;
+}

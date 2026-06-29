@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin Monmouton - Portfolio Cybersécurité GRC</title>
+    <meta name="description"
+        content="Portfolio de Kevin Monmouton, Expert en Cybersécurité, GRC, et Administration Système. Découvrez mes projets, compétences et expériences.">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Icons (Phosphor Icons for a clean tech look) -->
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.2/src/index.js" integrity="sha384-J7cw2fbG1T4C5MirTVUxsZGaMfw2m0XsCgOQEqUvB1OF9VIsHWuZF1GmyVRzs7eu" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Security Check (Must be first to prevent UI flash) -->
+    <script src="js/security-check.js"></script>
+</head>
+
+<body>
+    <div class="hex-grid-bg"></div>
+
+    <header class="hud-header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-text">GUEST</span>
+                <span class="blinking-cursor">_</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about" class="nav-link">À Propos</a></li>
+                    <li><a href="#experience" class="nav-link">Expérience</a></li>
+                    <li><a href="#skills" class="nav-link">Compétences</a></li>
+                    <li><a href="#homelab" class="nav-link">Homelab</a></li>
+                    <li><a href="#projects" class="nav-link">Projets</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <p class="subtitle highlight-cyan">&gt; IDENTIFICATION_CONFIRMED</p>
+                    <h1 class="title-glitch" data-text="KEVIN MONMOUTON">KEVIN MONMOUTON</h1>
+                    <h2 class="role">POSTE : Alternant RSI</h2>
+                    <h2 class="role">EMPLOYEUR : Ca-GIP</h2>
+                    <p class="description">
+                        Issu d’études en archéologie, j’ai découvert l’informatique en manipulant des outils numériques,
+                        notamment du matériel de numérisation / modélisation 3D.
+                        Cette passion m’a conduit à me réorienter vers la cybersécurité après mon master.
+                        Je me suis formé en autonomie grâce à des plateformes en ligne pour développer mes compétences
+                        et connaissances.
+                        Aujourd’hui, je suis étudiant en <strong>cybersécurité en alternance</strong>. Bien que la
+                        formation soit très technique,
+                        je m’intéresse particulièrement à la <strong>gouvernance et à la gestion des risques</strong>.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="assets/CV-Kevin_Monmouton-1.pdf" target="_blank" class="btn btn-primary">
+                            <i class="ph ph-download-simple"></i> Télécharger CV
+                        </a>
+                        <a href="#projects" class="btn btn-outline">
+                            <i class="ph ph-folder-open"></i> Voir les projets
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="avatar-container">
+                        <img src="assets/avatar_me_2.png" alt="Kevin Monmouton" class="avatar">
+                        <div class="hologram-effect"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title"><span class="bracket">[</span> Profil & Formation <span
+                        class="bracket">]</span></h2>
+                <div class="about-grid">
+                    <div class="glass-panel">
+                        <h3><i class="ph ph-graduation-cap"></i> Parcours Académique</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <span class="date highlight-gold">2024 - 2027</span>
+                                <h4>Expert Sécurité des Données, Systèmes et Réseaux (Bac+5)</h4>
+                                <p>École 2600.</p>
+                                <div class="timeline-desc">GRC, Blue Team, Red Team, Solutions techniques sécurisées
+                                    (cloud computing, machine learning...) et gestion de crise.</div>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="date highlight-gold">2023 - 2024</span>
+                                <h4>Bootcamp - Développement sécurisé</h4>
+                                <p>EPSI La Défense.</p>
+                                <div class="timeline-desc">Sécurité des systèmes, réseaux, bases de données et
+                                    applications, méthodes agiles, gestion des identités et accès, audit d'un S.I,
+                                    ethical hacking, veille technologique, développement Java, Python, SQL.</div>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="date highlight-gold">2017 - 2019</span>
+                                <h4>Master Recherche Archéologie</h4>
+                                <p>Université Paris IV Sorbonne.</p>
+                                <div class="timeline-desc">Réalisation d'une étude de bâti sur un groupe de monuments
+                                    classés en Bourgogne en vue de travaux de réhabilitation.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glass-panel certifs-panel">
+                        <h3><i class="ph ph-certificate"></i> Certifications</h3>
+                        <ul class="certif-list">
+                            <li><span class="cert-name">Security+ (CompTIA)</span> <span
+                                    class="badge status-pending">Prévue S2-2026</span></li>
+                            <li><span class="cert-name">SC-900 (Microsoft)</span> <span
+                                    class="badge status-active">Obtenue</span></li>
+                            <li><span class="cert-name">Certified in Cybersecurity (ISC2)</span> <span
+                                    class="badge status-active">Obtenue</span></li>
+                            <li><span class="cert-name">Cybersecurity Professional (Google)</span> <span
+                                    class="badge status-active">Obtenue</span></li>
+                            <li><span class="cert-name">MOOC (ANSSI)</span> <span
+                                    class="badge status-active">Obtenue</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE SECTION -->
+        <section id="experience" class="section">
+            <div class="container">
+                <h2 class="section-title"><span class="bracket">[</span> Expérience Professionnelle <span
+                        class="bracket">]</span></h2>
+                <div class="experience-card glass-panel">
+                    <div class="exp-header">
+                        <div class="exp-title">
+                            <h3>Alternant Fonction RSI</h3>
+                            <span class="company highlight-cyan">Crédit Agricole Group Infrastructure (CA-GIP)</span>
+                        </div>
+                        <div class="exp-date">Août 2024 - Août 2027</div>
+                    </div>
+                    <div class="exp-content">
+                        <ul class="tech-list">
+                            <li>Rédaction, maintien et validation de processus et standards SSI.</li>
+                            <li>Accompagnement de projets, avis de sécurité et dérogations SSI.</li>
+                            <li>Participation à divers comités et audits internes.</li>
+                            <li>Outillage du suivi des dérogations.</li>
+                            <li>Mise en place et maintien d’un inventaire des solutions de sécurité.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-card glass-panel" style="margin-top: 30px;">
+                    <div class="exp-header">
+                        <div class="exp-title">
+                            <h3>Projet de Master</h3>
+                            <span class="company highlight-cyan">Numérisation 3D d’un bâtiment historique</span>
+                        </div>
+                        <div class="exp-date">2017 - 2019</div>
+                    </div>
+                    <div class="exp-content">
+                        <ul class="tech-list">
+                            <li>Réalisation des démarches administratives et de communication.</li>
+                            <li>Rédaction du projet (planning prévisionnel, coûts, demande de matériel).</li>
+                            <li>Participation à des formations (méthodes de scan, pilotage de drône...).</li>
+                            <li>Recherches dans diverses archives (départementales, nationales, privées).</li>
+                            <li>Présentation des résultats.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title"><span class="bracket">[</span> Compétences <span class="bracket">]</span></h2>
+                <div class="skills-grid">
+                    <div class="skill-category glass-panel">
+                        <h3>GRC & Management</h3>
+                        <div class="skill-tags">
+                            <span>Esprit d’analyse</span>
+                            <span>Synthèse</span>
+                            <span>Gestion de projet</span>
+                            <span>Travail en équipe</span>
+                            <span>Adaptabilité</span>
+                            <span>Standards SSI</span>
+                        </div>
+                    </div>
+                    <div class="skill-category glass-panel">
+                        <h3>Administration & Sécurité</h3>
+                        <div class="skill-tags">
+                            <span>Admin Système (Linux, Windows)</span>
+                            <span>Admin Réseaux</span>
+                            <span>Active Directory</span>
+                            <span>Blue Team</span>
+                            <span>Fuzzing / Exploitation bas niveau</span>
+                        </div>
+                    </div>
+                    <div class="skill-category glass-panel">
+                        <h3>Développement</h3>
+                        <div class="skill-tags">
+                            <span>Python</span>
+                            <span>C</span>
+                            <span>Assembleur</span>
+                            <span>Rust</span>
+                            <span>SQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DASHBOARD HTB SECTION -->
+        <section id="metrics" class="section">
+            <div class="container">
+                <h2 class="section-title"><span class="bracket">[</span> Télémétrie & Entraînement <span
+                        class="bracket">]</span></h2>
+                <p class="description" style="margin-bottom: 30px; color: var(--color-text-muted);">
+                    Extraction des données d'entraînement continu depuis la plateforme HackTheBox Academy.
+                    <span class="highlight-cyan">Statut : ACTIF</span>
+                </p>
+                <div class="htb-stats-grid">
+                    <!-- Profile Stats -->
+                    <div class="glass-panel htb-card">
+                        <h3><i class="ph ph-user"></i> Identité Opérateur</h3>
+                        <div class="htb-user-stat">
+                            <span>Alias</span>
+                            <span class="stat-value">anonymousSJ117</span>
+                        </div>
+                        <div class="htb-user-stat">
+                            <span>Cubes Collectés</span>
+                            <span class="stat-value" style="color: var(--color-visor-gold);">441 <i
+                                    class="ph ph-cube"></i></span>
+                        </div>
+                        <div class="htb-user-stat">
+                            <span>Modules Complétés</span>
+                            <span class="stat-value">32</span>
+                        </div>
+                    </div>
+
+                    <!-- Global Progress -->
+                    <div class="glass-panel htb-card">
+                        <h3><i class="ph ph-chart-bar"></i> Progression Globale</h3>
+
+                        <div class="progress-item">
+                            <div class="progress-label"><span>Offensif</span><span>2.2%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress-fill red" style="width: 2.2%;"></div>
+                            </div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-label"><span>Défensif</span><span>26.3%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 26.3%;"></div>
+                            </div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-label"><span>Général</span><span>63.1%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress-fill gold" style="width: 63.1%;"></div>
+                            </div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-label"><span>Purple</span><span>41%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress-fill purple" style="width: 41%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certifications & Paths -->
+                    <div class="glass-panel htb-card">
+                        <h3><i class="ph ph-medal"></i> Certifications & Voies</h3>
+
+                        <div class="htb-cert">
+                            <span class="htb-cert-name">CDSA (Defensive Security Analyst)</span>
+                            <span class="htb-cert-status"><i class="ph ph-check-circle"></i> Exam ready to take</span>
+                        </div>
+
+                        <div class="htb-cert">
+                            <span class="htb-cert-name">SOC Analyst (Job Role Path)</span>
+                            <span class="htb-cert-status"><i class="ph ph-check-circle" style="color: #a3e635;"></i>
+                                Completed</span>
+                        </div>
+
+                        <div class="htb-cert">
+                            <span class="htb-cert-name">CJCA (Certified Junior Cybersecurity Associate)</span>
+                            <div class="progress-item" style="margin-top: 8px; margin-bottom: 0;">
+                                <div class="progress-label" style="font-size: 0.85rem; color: var(--color-visor-gold);">
+                                    <span>En cours</span><span>58%</span>
+                                </div>
+                                <div class="progress-bar" style="height: 6px;">
+                                    <div class="progress-fill" style="width: 58%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Completed Modules -->
+                    <div class="glass-panel htb-card" style="grid-column: 1 / -1;">
+                        <h3><i class="ph ph-database"></i> 32 Modules Complétés</h3>
+                        <div class="modules-container">
+                            <div class="module-tags">
+                                <span class="module-tag">Learning Process</span>
+                                <span class="module-tag">Intro To Academy</span>
+                                <span class="module-tag">Linux Fundamentals</span>
+                                <span class="module-tag">Network Enumeration With Nmap</span>
+                                <span class="module-tag">Introduction To Bash Scripting</span>
+                                <span class="module-tag">Introduction To Networking</span>
+                                <span class="module-tag">Web Requests</span>
+                                <span class="module-tag">JavaScript Deobfuscation</span>
+                                <span class="module-tag">Windows Fundamentals</span>
+                                <span class="module-tag">Introduction To Active Directory</span>
+                                <span class="module-tag">Introduction To Web Applications</span>
+                                <span class="module-tag">Getting Started</span>
+                                <span class="module-tag">Intro To Network Traffic Analysis</span>
+                                <span class="module-tag">Intro To Assembly Language</span>
+                                <span class="module-tag">Setting Up</span>
+                                <span class="module-tag">Introduction To Python 3</span>
+                                <span class="module-tag">Penetration Testing Process</span>
+                                <span class="module-tag">Incident Handling Process</span>
+                                <span class="module-tag">MacOS Fundamentals</span>
+                                <span class="module-tag">Introduction To Windows Command Line</span>
+                                <span class="module-tag">Windows Attacks & Defense</span>
+                                <span class="module-tag">Security Monitoring & SIEM Fundamentals</span>
+                                <span class="module-tag">Introduction To Threat Hunting</span>
+                                <span class="module-tag">Windows Event Logs & Finding Evil</span>
+                                <span class="module-tag">Understanding Log Sources</span>
+                                <span class="module-tag">Working With IDS/IPS</span>
+                                <span class="module-tag">Introduction To Malware Analysis</span>
+                                <span class="module-tag">Intermediate Network Traffic Analysis</span>
+                                <span class="module-tag">Detecting Windows Attacks With Splunk</span>
+                                <span class="module-tag">YARA & Sigma For SOC Analysts</span>
+                                <span class="module-tag">Introduction To Digital Forensics</span>
+                                <span class="module-tag">Security Incident Reporting</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOMELAB SECTION -->
+        <section id="homelab" class="section">
+            <div class="container">
+                <div class="section-header-flex">
+                    <h2 class="section-title"><span class="bracket">[</span> Homelab <span class="bracket">]</span></h2>
+                    <a href="homelab.html" class="btn btn-outline small-btn">Voir l'architecture complète &gt;</a>
+                </div>
+                <p class="description" style="margin-bottom: 30px; color: var(--color-text-muted);">
+                    Environnement personnel de test cybersécurité pour simuler des scénarios réalistes : segmentation
+                    réseau, supervision, services d'identité, journalisation centralisée et validation de procédures
+                    de défense.
+                </p>
+                <div class="homelab-grid">
+                    <a href="homelab.html" class="project-card glass-panel interactive">
+                        <div class="project-icon"><i class="ph ph-cpu"></i></div>
+                        <h3>Laboratoire Cyber Personnel</h3>
+                        <p>
+                            Infrastructure virtualisée pour entraîner les usages Blue Team/administration : AD, DNS, SIEM,
+                            firewalling, bastion et playbooks de réponse à incident.
+                        </p>
+                        <div class="card-footer">ACCÈS AUTORISÉ</div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS PREVIEW SECTION -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-header-flex">
+                    <h2 class="section-title"><span class="bracket">[</span> Domaines d'Expertise <span
+                            class="bracket">]</span></h2>
+                    <a href="projets.html" class="btn btn-outline small-btn">Voir tous les rapports &gt;</a>
+                </div>
+
+                <div class="projects-grid">
+                    <a href="projets.html#admin" class="project-card glass-panel interactive">
+                        <div class="project-icon"><i class="ph ph-hard-drives"></i></div>
+                        <h3>Administration Système</h3>
+                        <p>Systèmes Linux/Windows, services d'infrastructure, supervision et durcissement.</p>
+                        <div class="card-footer">ACCÈS AUTORISÉ</div>
+                    </a>
+                    <a href="projets.html#bdd" class="project-card glass-panel interactive">
+                        <div class="project-icon"><i class="ph ph-database"></i></div>
+                        <h3>Bases de Données</h3>
+                        <p>Modélisation, requêtes SQL, sécurité des données et gestion des accès.</p>
+                        <div class="card-footer">ACCÈS AUTORISÉ</div>
+                    </a>
+                    <a href="projets.html#crypto" class="project-card glass-panel interactive">
+                        <div class="project-icon"><i class="ph ph-key"></i></div>
+                        <h3>Cryptographie</h3>
+                        <p>Chiffrement, arithmétique modulaire et implémentations cryptographiques.</p>
+                        <div class="card-footer">ACCÈS AUTORISÉ</div>
+                    </a>
+                    <a href="projets.html#cyber" class="project-card glass-panel interactive">
+                        <div class="project-icon"><i class="ph ph-shield-warning"></i></div>
+                        <h3>Cybersécurité</h3>
+                        <p>Audit, gestion des risques, sécurité offensive/défensive et réponse à incident.</p>
+                        <div class="card-footer">ACCÈS AUTORISÉ</div>
+                    </a>
+                    <a href="projets.html#ids" class="project-card glass-panel interactive">
+                        <div class="project-icon"><i class="ph ph-binoculars"></i></div>
+                        <h3>Détection des Intrusions</h3>
+                        <p>Monitoring, détection d'anomalies, SIEM/EDR et corrélation d'événements.</p>
+                        <div class="card-footer">ACCÈS AUTORISÉ</div>
+                    </a>
+                    <a href="projets.html#dev" class="project-card glass-panel interactive">
+                        <div class="project-icon"><i class="ph ph-code"></i></div>
+                        <h3>Développement</h3>
+                        <p>Conception d'outils en Python/C/Rust, scripts d'automatisation et logique algorithmique.</p>
+                        <div class="card-footer">ACCÈS AUTORISÉ</div>
+                    </a>
+                    <div class="project-card glass-panel denied-card" aria-hidden="true">
+                        <div class="project-icon"><i class="ph ph-warning-octagon"></i></div>
+                        <h3>Intrusion physique</h3>
+                        <p>Scénarios d'intrusion terrain et sécurité des accès physiques. Zone verrouillée.</p>
+                        <div class="card-footer denied-footer">ACCÈS REFUSÉ</div>
+                    </div>
+                    <div class="project-card glass-panel denied-card" aria-hidden="true">
+                        <div class="project-icon"><i class="ph ph-binoculars"></i></div>
+                        <h3>OSINT</h3>
+                        <p>Collecte et corrélation d'informations en sources ouvertes. Données sensibles masquées.</p>
+                        <div class="card-footer denied-footer">ACCÈS REFUSÉ</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="hud-footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h3>CONTACT_UPLINK</h3>
+                <p><a href="mailto:kevin.monmouton@ecole2600.com"
+                        style="color: var(--color-text-main); text-decoration: none;"><i class="ph ph-envelope-simple"
+                            style="color: var(--color-cortana-cyan);"></i> kevin.monmouton@ecole2600.com</a></p>
+            </div>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/kevin-monmouton/" class="social-link"><i
+                        class="ph ph-linkedin-logo"></i> LinkedIn</a>
+            </div>
+            <div class="sys-status">
+                <span class="status-dot"></span> SYSTEM_ONLINE
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

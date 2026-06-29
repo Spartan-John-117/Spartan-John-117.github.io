@@ -1,0 +1,7 @@
+; fichier d'exemple en langage d'assembleur pour la machine virtuel mini Vm2600.
+
+; un label est juste un 'identifier' suivi de :
+main:
+    loadstra "hello world!\n"
+    syscall 1 ; sysecho
+syscall 0 ; sysexit

@@ -1,0 +1,15 @@
+loadintb 2600
+caststrb
+loadstrc "\n"
+pushc
+add_abc
+syscall 1 ; sysecho
+castinta
+loadintb 42
+add_cab
+mov_bc
+caststrb
+popc
+add_abc
+syscall 1 ; sysecho
+syscall 0 ; sysexit

@@ -1,0 +1,1 @@
+Bash scripts are kept for reference only. The recommended way to setup vcpkg, build with cmake and run C tests is to use the `src/arithmatoy/__main__.py` python script, launched with rye. See project's [README.md](../README.md)

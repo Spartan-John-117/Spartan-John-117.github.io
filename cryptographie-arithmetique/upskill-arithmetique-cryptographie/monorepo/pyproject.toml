@@ -1,0 +1,55 @@
+[project]
+name = "maths-[SUPPRIME_2600]-monorepo"
+version = "0.1.0"
+description = "Monorepo pour le cours de maths de l'école [SUPPRIME_2600]"
+authors = [
+    { name = "Celeborn2BeAlive", email = "laurent.noel.c2ba@gmail.com" }
+]
+dependencies = []
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[tool.rye]
+managed = true
+virtual = true
+universal = true
+dev-dependencies = [
+    "pytest>=8.4.0",
+    "ruff>=0.11.13",
+    "mypy>=1.16.0",
+    "pytest-cov>=6.1.1",
+]
+
+[tool.rye.workspace]
+members = ["apps/*", "packages/*"]
+
+[tool.rye.scripts]
+"lint:fix" = "ruff check --fix"
+"lint:check" = "ruff check"
+"format:fix" = "ruff format"
+"format:check" = "ruff format --check"
+"type:check" = "mypy --install-types --non-interactive apps/ packages/"
+tests = "pytest -s"
+
+[tool.ruff]
+cache-dir = ".local/ruff_cache"
+
+[tool.ruff.lint]
+extend-select = [
+    "I" # sort imports
+]
+
+[tool.pytest.ini_options]
+addopts = "--import-mode=importlib"
+cache_dir = ".local/pytest_cache"
+
+[tool.mypy]
+cache_dir = ".local/mypy_cache"
+
+[tool.coverage.run]
+branch = true
+data_file = ".local/.coverage"
+
+[tool.coverage.report]
+show_missing = true
+exclude_lines = ["pragma: no cover", "if __name__ == .__main__.:", "if 0:", "if False:"]

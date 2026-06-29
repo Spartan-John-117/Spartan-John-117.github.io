@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets - Kevin Monmouton</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.2/src/index.js" integrity="sha384-J7cw2fbG1T4C5MirTVUxsZGaMfw2m0XsCgOQEqUvB1OF9VIsHWuZF1GmyVRzs7eu" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Security Check (Must be first to prevent UI flash) -->
+    <script src="js/security-check.js"></script>
+    <style>
+        .projects-header {
+            padding-top: 150px;
+            text-align: center;
+        }
+        .domain-section {
+            margin-bottom: 80px;
+        }
+        .domain-title {
+            color: var(--color-visor-gold);
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-bottom: 1px solid rgba(232, 166, 23, 0.3);
+            padding-bottom: 10px;
+        }
+        .project-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            border-left: 3px solid var(--color-cortana-cyan);
+            background: rgba(0, 229, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+        .project-item:hover {
+            background: rgba(0, 229, 255, 0.1);
+            transform: translateX(10px);
+        }
+        .project-title {
+            color: #fff;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        .project-desc {
+            color: var(--color-text-muted);
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hex-grid-bg"></div>
+
+    <header class="hud-header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-text">K.MONMOUTON</span>
+                <span class="blinking-cursor">_</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="portfolio.html" class="nav-link">Accueil</a></li>
+                    <li><a href="portfolio.html#about" class="nav-link">À Propos</a></li>
+                    <li><a href="portfolio.html#projects" class="nav-link">Projets</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="projects-header">
+            <a href="portfolio.html" class="btn btn-outline back-link">&lt; Retour au terminal principal</a>
+            <h1 class="title-glitch" data-text="RAPPORTS DE PROJETS">RAPPORTS DE PROJETS</h1>
+            <p class="description highlight-cyan">
+                Archive des missions techniques, laboratoires et expérimentations.
+            </p>
+        </section>
+
+        <section id="cyber" class="domain-section">
+            <h2 class="domain-title"><i class="ph ph-shield-warning"></i> Cybersécurité</h2>
+            <div class="glass-panel">
+                <a href="projet.html?id=intro-fuzzing" class="project-item" style="display: block; text-decoration: none;">
+                    <h3 class="project-title">Introduction au Fuzzing</h3>
+                    <p class="project-desc">Apprentissage des techniques de fuzzing pour identifier des vulnérabilités logicielles. Étude des buffers overflows, des canaries de pile et de l'ASLR. Mise en pratique sur des binaires vulnérables via GDB. Analyse des crashs pour extraire des vecteurs d'attaque.</p>
+                </a>
+                <a href="projet.html?id=upskill-exploitation" class="project-item" style="display: block; text-decoration: none;">
+                    <h3 class="project-title">Upskill Exploitation Bas-Niveau</h3>
+                    <p class="project-desc">Exploration profonde des mécanismes de protection mémoire modernes. Étude des vulnérabilités de type Format Strings et ROP (Return Oriented Programming). Développement de payloads complexes pour contourner les protections activées par défaut. Analyse de sécurité et exploitation système.</p>
+                </a>
+                <a href="projet.html?id=secmalloc" class="project-item" style="display: block; text-decoration: none;">
+                    <h3 class="project-title">Implémentation secmalloc</h3>
+                    <p class="project-desc">Développement d'un allocateur mémoire personnalisé en C intégrant des mesures de sécurité renforcées. Gestion rigoureuse des structures de heap pour prévenir les attaques de type double-free et heap-overflow. Audit du code pour détecter les fuites mémoire et les comportements indéfinis.</p>
+                </a>
+                <a href="projet.html?id=lab-iot" class="project-item" style="display: block; text-decoration: none;">
+                    <h3 class="project-title">Laboratoire IoT</h3>
+                    <p class="project-desc">Immersion dans l'écosystème des objets connectés via des challenges techniques dédiés. Analyse de firmwares, extraction de fichiers systèmes et ingénierie inverse de protocoles. Étude des failles courantes sur des architectures embarquées et rédaction de writeups détaillés.</p>
+                </a>
+            </div>
+        </section>
+
+        <section id="admin" class="domain-section">
+            <h2 class="domain-title"><i class="ph ph-hard-drives"></i> Administration Système</h2>
+            <div class="glass-panel">
+                <a href="projet.html?id=lab-linux" class="project-item" style="display: block; text-decoration: none;">
+                    <h3 class="project-title">Lab Linux GNS3</h3>
+                    <p class="project-desc">Déploiement d'une infrastructure réseau virtualisée complète incluant des serveurs Linux. Configuration des services critiques : Bind9 pour le DNS, serveurs web Apache/Nginx et serveurs LDAP pour l'authentification centralisée. Mise en place de règles de routage et de filtrage réseau.</p>
+                </a>
+                <a href="projet.html?id=lab-windows" class="project-item" style="display: block; text-decoration: none;">
+                    <h3 class="project-title">Lab Windows GNS3</h3>
+                    <p class="project-desc">Création d'un domaine Active Directory isolé au sein de GNS3. Configuration des contrôleurs de domaine, gestion des utilisateurs et des groupes via des GPO. Automatisation des tâches d'administration et déploiement de stratégies de sécurité cohérentes pour l'entreprise.</p>
+                </a>
+                <a href="projet.html?id=lab-proxmox-ad" class="project-item" style="display: block; text-decoration: none;">
+                    <h3 class="project-title">Lab Proxmox Active Directory</h3>
+                    <p class="project-desc">Déploiement en environnement virtualisé haute disponibilité sous Proxmox. Mise en place d'une architecture AD robuste permettant des tests d'intrusion. Gestion des snapshots, des réseaux virtuels et des politiques de sauvegardes pour assurer la résilience du service informatique.</p>
+                </a>
+                <a href="projet.html?id=scripts-shell" class="project-item" style="display: block; text-decoration: none;">
+                    <h3 class="project-title">Scripts Shell Système</h3>
+                    <p class="project-desc">Développement d'une suite de scripts Bash pour l'automatisation de l'administration système. Analyse de logs en temps réel, alertes de sécurité sur des événements suspects et maintenance préventive. Outils d'aide au diagnostic pour la résolution rapide des incidents de production.</p>
+                </a>
+            </div>
+        </section>
+
+        <section id="dev" class="domain-section">
+            <h2 class="domain-title"><i class="ph ph-code"></i> Développement</h2>
+            <div class="glass-panel">
+                <a href="projet.html?id=python-basics" class="project-item" style="display: block; text-decoration: none;">
+                    <h3 class="project-title">Remise à niveau Python</h3>
+                    <p class="project-desc">Renforcement des bases de la programmation en Python avec une approche orientée performance. Optimisation d'algorithmes de recherche, manipulation de structures de données complexes et automatisation de tâches. Écriture de scripts robustes et maintenables pour des usages professionnels.</p>
+                </a>
+                <a href="projet.html?id=sidequest" class="project-item" style="display: block; text-decoration: none;">
+                    <h3 class="project-title">Sidequest (Projets divers)</h3>
+                    <p class="project-desc">Série de mini-projets exploratoires pour tester des technologies émergentes ou des outils spécifiques. Développement de prototypes rapides, résolution de défis de logique algorithmique et expérimentation avec des frameworks modernes. Approche agile pour acquérir des compétences techniques variées.</p>
+                </a>
+                <a href="projet.html?id=upskill-rust" class="project-item" style="display: block; text-decoration: none;">
+                    <h3 class="project-title">Upskill Rust</h3>
+                    <p class="project-desc">Apprentissage avancé du langage Rust en se concentrant sur la gestion sécurisée de la mémoire. Développement d'outils réseau et utilitaires systèmes garantissant une absence de fuites. Exploration du système de ownership et des traits pour des programmes performants et sécurisés.</p>
+                </a>
+                <a href="projet.html?id=vm-emulation" class="project-item" style="display: block; text-decoration: none;">
+                    <h3 class="project-title">VM Emulation</h3>
+                    <p class="project-desc">Implémentation de fonctionnalités bas niveau au sein d'une machine virtuelle existante. Ajout de nouveaux opcodes, gestion de la stack et interaction avec la mémoire physique. Analyse profonde du cycle d'instruction du processeur et des mécanismes d'exécution de code binaire.</p>
+                </a>
+                <a href="projet.html?id=plist-windows" class="project-item" style="display: block; text-decoration: none;">
+                    <h3 class="project-title">Visualisateur Processus Windows</h3>
+                    <p class="project-desc">Création d'un utilitaire système utilisant l'API Windows (Win32 API). Extraction dynamique des processus actifs, énumération des threads et récupération des descripteurs de fichiers associés. Outil de monitoring complet pour l'analyse de l'activité logicielle en environnement Windows.</p>
+                </a>
+                <a href="projet.html?id=parser-calc" class="project-item" style="display: block; text-decoration: none;">
+                    <h3 class="project-title">Parser et Calculatrice</h3>
+                    <p class="project-desc">Développement from scratch d'un interpréteur de langage mathématique en C. Mise en œuvre d'une analyse lexicale et syntaxique (AST). Gestion de la priorité des opérateurs et évaluation sécurisée des expressions. Projet axé sur la rigueur de la structure de données et l'algorithmique.</p>
+                </a>
+            </div>
+        </section>
+
+        <section id="crypto" class="domain-section">
+            <h2 class="domain-title"><i class="ph ph-key"></i> Cryptographie</h2>
+            <div class="glass-panel">
+                <a href="projet.html?id=crypto-arithm" class="project-item" style="display: block; text-decoration: none;">
+                    <h3 class="project-title">Arithmétique & Turing</h3>
+                    <p class="project-desc">Étude mathématique des fondements de la cryptographie et implémentation d'algorithmes classiques. Développement d'un simulateur de Machine de Turing pour modéliser des calculs complexes. Analyse de la complexité algorithmique et réflexion sur les limites de la calculabilité.</p>
+                </a>
+                <a href="projet.html?id=rsa-bellcore" class="project-item" style="display: block; text-decoration: none;">
+                    <h3 class="project-title">Examen RSA-CRT / Bellcore</h3>
+                    <p class="project-desc">Étude théorique et pratique des attaques contre les implémentations RSA utilisant le théorème des restes chinois (CRT). Mise en œuvre de l'attaque de Bellcore pour induire des erreurs de calcul et retrouver la clé privée. Analyse des contre-mesures nécessaires pour sécuriser les signatures.</p>
+                </a>
+            </div>
+        </section>
+
+        <section id="bdd" class="domain-section">
+            <h2 class="domain-title"><i class="ph ph-database"></i> Bases de Données</h2>
+            <div class="glass-panel">
+                <a href="projet.html?id=gestion-bdd" class="project-item" style="display: block; text-decoration: none;">
+                    <h3 class="project-title">Gestion de Bases de Données</h3>
+                    <p class="project-desc">Conception et interrogation de bases de données relationnelles complexes en SQL. Normalisation des données pour garantir l'intégrité et l'efficacité des requêtes. Mise en place de mesures de sécurité contre les injections SQL et optimisation des index pour les performances système.</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Détection d'Intrusions -->
+        <section id="ids" class="domain-section">
+            <h2 class="domain-title"><i class="ph ph-eye"></i> Détection d'Intrusions</h2>
+            <div class="glass-panel">
+                <a href="projet.html?id=red-blue-team" class="project-item" style="display: block; text-decoration: none;">
+                    <h3 class="project-title">Rapport Red Team / Blue Team</h3>
+                    <p class="project-desc">Exercice Red Team / Blue Team en groupe de 6 : attaques MITRE ATT&CK simulées le matin (T1106 Execution via API, T1547 Persistance, T1574 DLL Hijacking, T1003 LSASS Dump) puis analyse Blue Team complète l'après-midi. Rapport de détection détaillé produit grâce à l'expertise d'un membre en alternance en réponse à incident. Analyse des IOC, corrélation d'événements et recommandations de remédiation.</p>
+                </a>
+                <a href="projet.html?id=edr-groupe16" class="project-item" style="display: block; text-decoration: none;">
+                    <h3 class="project-title">EDR Maison — Groupe 16</h3>
+                    <p class="project-desc">Conception et implémentation d'un EDR (Endpoint Detection & Response) from scratch en équipe. L'agent utilise eBPF pour intercepter les syscalls suspects et envoyer des alertes via un daemon en espace utilisateur. Livrable complet : image VM QCOW2, outil CLI <code>edrctl</code>, rapport de conception et documentation utilisateur. Démontre une compréhension avancée du noyau Linux, de BPF et de l'architecture sécurité endpoint.</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="hud-footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h3>CONTACT_UPLINK</h3>
+                <p>kevin.monmouton@ecole2600.com</p>
+                <p>Paris, 75011</p>
+            </div>
+            <div class="sys-status">
+                <span class="status-dot"></span> SYSTEM_ONLINE
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

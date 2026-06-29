@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin Monmouton - Homelab Cyber</title>
+    <meta name="description"
+        content="Présentation du homelab cyber de Kevin Monmouton : architecture, services, supervision et scénarios de sécurité.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="hex-grid-bg"></div>
+
+    <header class="hud-header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-text">HOMELAB</span>
+                <span class="blinking-cursor">_</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="portfolio.html#homelab" class="nav-link">Retour Portfolio</a></li>
+                    <li><a href="#overview" class="nav-link">Vue d'ensemble</a></li>
+                    <li><a href="#architecture" class="nav-link">Architecture</a></li>
+                    <li><a href="#security" class="nav-link">Sécurité</a></li>
+                    <li><a href="#roadmap" class="nav-link">Roadmap</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="overview" class="hero-section">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <p class="subtitle highlight-cyan">&gt; LAB_ENVIRONMENT_ONLINE</p>
+                    <h1 class="title-glitch" data-text="HOMELAB CYBER">HOMELAB CYBER</h1>
+                    <h2 class="role">PLATEFORME : Test & Simulation</h2>
+                    <h2 class="role">STATUT : ÉVOLUTIF</h2>
+                    <p class="description">
+                        Ce homelab sert de socle d'apprentissage continu pour tester des configurations d'infrastructure,
+                        valider des mécanismes de défense et reproduire des incidents en environnement contrôlé.
+                        L'objectif est de relier l'administration système, le réseau et la cybersécurité avec une
+                        approche pragmatique orientée exploitation et détection.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#architecture" class="btn btn-primary"><i class="ph ph-diagram"></i> Voir l'architecture</a>
+                        <a href="portfolio.html#projects" class="btn btn-outline"><i class="ph ph-arrow-left"></i> Retour projets</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="architecture" class="section">
+            <div class="container">
+                <h2 class="section-title"><span class="bracket">[</span> Architecture Type <span class="bracket">]</span></h2>
+                <div class="about-grid">
+                    <div class="glass-panel">
+                        <h3><i class="ph ph-tree-structure"></i> Composants</h3>
+                        <ul class="tech-list">
+                            <li>Hyperviseur local (Proxmox/VirtualBox) avec VLAN de laboratoire.</li>
+                            <li>Contrôleur de domaine Active Directory + DNS interne.</li>
+                            <li>Serveur Linux durci pour services d'administration (SSH, automation, scripts).</li>
+                            <li>Pare-feu/routeur dédié pour filtrage inter-zones et règles NAT.</li>
+                            <li>Collecte centralisée des logs via SIEM (Syslog, Windows Events, alerting).</li>
+                        </ul>
+                    </div>
+                    <div class="glass-panel certifs-panel">
+                        <h3><i class="ph ph-stack"></i> Stack Technique</h3>
+                        <div class="skill-tags">
+                            <span>Linux</span>
+                            <span>Windows Server</span>
+                            <span>Active Directory</span>
+                            <span>DNS/DHCP</span>
+                            <span>pfSense/OPNsense</span>
+                            <span>Suricata</span>
+                            <span>Wazuh/Splunk</span>
+                            <span>Python/Bash</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="security" class="section">
+            <div class="container">
+                <h2 class="section-title"><span class="bracket">[</span> Cas d'Usage Sécurité <span class="bracket">]</span></h2>
+                <div class="skills-grid">
+                    <div class="skill-category glass-panel">
+                        <h3>Détection</h3>
+                        <div class="skill-tags">
+                            <span>Corrélation d'événements</span>
+                            <span>Règles Sigma</span>
+                            <span>Détection brute-force</span>
+                            <span>Alertes réseau</span>
+                        </div>
+                    </div>
+                    <div class="skill-category glass-panel">
+                        <h3>Réponse</h3>
+                        <div class="skill-tags">
+                            <span>Playbooks IR</span>
+                            <span>Confinement machine</span>
+                            <span>Collecte d'artefacts</span>
+                            <span>Post-mortem</span>
+                        </div>
+                    </div>
+                    <div class="skill-category glass-panel">
+                        <h3>Durcissement</h3>
+                        <div class="skill-tags">
+                            <span>Segmentation réseau</span>
+                            <span>Politiques GPO</span>
+                            <span>MFA / bastion</span>
+                            <span>Gestion des correctifs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="roadmap" class="section">
+            <div class="container">
+                <h2 class="section-title"><span class="bracket">[</span> Roadmap Homelab <span class="bracket">]</span></h2>
+                <div class="experience-card glass-panel">
+                    <div class="exp-header">
+                        <div class="exp-title">
+                            <h3>Prochaines évolutions</h3>
+                            <span class="company highlight-cyan">Plan d'amélioration continue</span>
+                        </div>
+                        <div class="exp-date">Q2 - Q4</div>
+                    </div>
+                    <div class="exp-content">
+                        <ul class="tech-list">
+                            <li>Déploiement d'un SOC miniature avec dashboard unifié.</li>
+                            <li>Ajout d'une zone attaquante dédiée pour scénarios Red Team.</li>
+                            <li>Automatisation des snapshots et restauration post-incident.</li>
+                            <li>Intégration de tests de conformité basés CIS Benchmarks.</li>
+                            <li>Documentation technique complète et schémas réseau versionnés.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="hud-footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h3>LAB_CONTACT</h3>
+                <p><a href="mailto:kevin.monmouton@ecole2600.com"
+                        style="color: var(--color-text-main); text-decoration: none;"><i class="ph ph-envelope-simple"
+                            style="color: var(--color-cortana-cyan);"></i> kevin.monmouton@ecole2600.com</a></p>
+            </div>
+            <div class="footer-links">
+                <a href="portfolio.html" class="social-link"><i class="ph ph-arrow-left"></i> Retour Portfolio</a>
+            </div>
+            <div class="sys-status">
+                <span class="status-dot"></span> LAB_ONLINE
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
