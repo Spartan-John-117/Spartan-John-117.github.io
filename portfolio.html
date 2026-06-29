@@ -14,9 +14,11 @@
         href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <!-- Icons (Phosphor Icons for a clean tech look) -->
-    <script src="https://unpkg.com/@phosphor-icons/web@2.1.2/src/index.js" integrity="sha384-J7cw2fbG1T4C5MirTVUxsZGaMfw2m0XsCgOQEqUvB1OF9VIsHWuZF1GmyVRzs7eu" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.2/src/index.js"
+        integrity="sha384-J7cw2fbG1T4C5MirTVUxsZGaMfw2m0XsCgOQEqUvB1OF9VIsHWuZF1GmyVRzs7eu"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
-    
+
     <!-- Security Check (Must be first to prevent UI flash) -->
     <script src="js/security-check.js"></script>
 </head>
@@ -27,7 +29,7 @@
     <header class="hud-header">
         <div class="container">
             <div class="logo">
-                <span class="logo-text">GUEST</span>
+                <span class="logo-text">Administrator</span>
                 <span class="blinking-cursor">_</span>
             </div>
             <nav>
@@ -49,20 +51,22 @@
                 <div class="hero-text">
                     <p class="subtitle highlight-cyan">&gt; IDENTIFICATION_CONFIRMED</p>
                     <h1 class="title-glitch" data-text="KEVIN MONMOUTON">KEVIN MONMOUTON</h1>
-                    <h2 class="role">POSTE : Alternant RSI</h2>
-                    <h2 class="role">EMPLOYEUR : Ca-GIP</h2>
+                    <p class="role">POSTE : Alternant RSI &nbsp;·&nbsp; EMPLOYEUR : CA-GIP</p>
                     <p class="description">
-                        Issu d’études en archéologie, j’ai découvert l’informatique en manipulant des outils numériques,
-                        notamment du matériel de numérisation / modélisation 3D.
-                        Cette passion m’a conduit à me réorienter vers la cybersécurité après mon master.
-                        Je me suis formé en autonomie grâce à des plateformes en ligne pour développer mes compétences
-                        et connaissances.
-                        Aujourd’hui, je suis étudiant en <strong>cybersécurité en alternance</strong>. Bien que la
-                        formation soit très technique,
-                        je m’intéresse particulièrement à la <strong>gouvernance et à la gestion des risques</strong>.
+                        Chaque parcours commence par une découverte. Le mien est né en archéologie, où la numérisation
+                        et la modélisation 3D m'ont ouvert les portes des technologies numériques. Cette exploration est
+                        devenue une vocation, me conduisant à me réorienter vers la <strong>cybersécurité</strong> après
+                        mon master.
+                    </p>
+                    <p class="description" style="margin-top: 1rem;">
+                        Porté par une curiosité constante, j'ai développé mes compétences en autonomie avant de
+                        rejoindre une formation en cybersécurité en alternance. Aujourd'hui, au-delà de la technique,
+                        je me spécialise dans la <strong>gouvernance de la sécurité</strong> et la
+                        <strong>gestion des risques</strong>, convaincu que les meilleures défenses reposent autant sur
+                        la stratégie que sur la technologie.
                     </p>
                     <div class="hero-actions">
-                        <a href="assets/CV-Kevin_Monmouton-1.pdf" target="_blank" class="btn btn-primary">
+                        <a href="assets/CV-Kevin_Monmouton.pdf" target="_blank" class="btn btn-primary">
                             <i class="ph ph-download-simple"></i> Télécharger CV
                         </a>
                         <a href="#projects" class="btn btn-outline">
@@ -224,6 +228,7 @@
                 <p class="description" style="margin-bottom: 30px; color: var(--color-text-muted);">
                     Extraction des données d'entraînement continu depuis la plateforme HackTheBox Academy.
                     <span class="highlight-cyan">Statut : ACTIF</span>
+                    <span style="margin-left: 1rem; font-size: 0.8rem; opacity: 0.5;">— Données au 29/06/2026</span>
                 </p>
                 <div class="htb-stats-grid">
                     <!-- Profile Stats -->
@@ -231,7 +236,7 @@
                         <h3><i class="ph ph-user"></i> Identité Opérateur</h3>
                         <div class="htb-user-stat">
                             <span>Alias</span>
-                            <span class="stat-value">anonymousSJ117</span>
+                            <span class="stat-value">Spartan_KM</span>
                         </div>
                         <div class="htb-user-stat">
                             <span>Cubes Collectés</span>
@@ -363,7 +368,8 @@
                         <div class="project-icon"><i class="ph ph-cpu"></i></div>
                         <h3>Laboratoire Cyber Personnel</h3>
                         <p>
-                            Infrastructure virtualisée pour entraîner les usages Blue Team/administration : AD, DNS, SIEM,
+                            Infrastructure virtualisée pour entraîner les usages Blue Team/administration : AD, DNS,
+                            SIEM,
                             firewalling, bastion et playbooks de réponse à incident.
                         </p>
                         <div class="card-footer">ACCÈS AUTORISÉ</div>
@@ -446,6 +452,8 @@
             <div class="footer-links">
                 <a href="https://www.linkedin.com/in/kevin-monmouton/" class="social-link"><i
                         class="ph ph-linkedin-logo"></i> LinkedIn</a>
+                <a href="https://github.com/Spartan-John-117" target="_blank" class="social-link"><i
+                        class="ph ph-github-logo"></i> GitHub</a>
             </div>
             <div class="sys-status">
                 <span class="status-dot"></span> SYSTEM_ONLINE
