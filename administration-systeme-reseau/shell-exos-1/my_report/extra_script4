@@ -1,3 +1,0 @@
-#!/usr/bin/env perl
-
-printf "Don't trust file extension!\n";

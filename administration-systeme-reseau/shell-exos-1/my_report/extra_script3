@@ -1,3 +1,0 @@
-#!/usr/local/bin/python3.10
-
-print(f"Don't use file extension to deduce is type")
