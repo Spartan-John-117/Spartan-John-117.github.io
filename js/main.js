@@ -88,35 +88,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 4. Reveal elements on scroll (HUD loading effect)
     const revealElements = document.querySelectorAll('.glass-panel, .section-title');
-    
+
     const revealOptions = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px"
+        threshold: 0.05,
+        rootMargin: "0px 0px 0px 0px"
     };
 
     const revealOnScroll = new IntersectionObserver(function(entries, observer) {
         entries.forEach(entry => {
-            if (!entry.isIntersecting) {
-                return;
-            } else {
-                // Add class to trigger CSS animation
-                entry.target.style.opacity = '0';
-                entry.target.style.transform = 'translateY(20px)';
-                entry.target.style.transition = 'all 0.6s ease-out';
-                
-                // Force reflow
-                void entry.target.offsetWidth;
-                
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-                
-                observer.unobserve(entry.target);
-            }
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('revealed');
+            observer.unobserve(entry.target);
         });
     }, revealOptions);
 
     revealElements.forEach(el => {
-        el.style.opacity = '0'; // Initial state
+        el.classList.add('reveal-hidden');
         revealOnScroll.observe(el);
     });
+
+    // Fallback : révèle tout ce qui reste caché après 2s
+    setTimeout(() => {
+        document.querySelectorAll('.reveal-hidden:not(.revealed)').forEach(el => {
+            el.classList.add('revealed');
+        });
+    }, 2000);
 });

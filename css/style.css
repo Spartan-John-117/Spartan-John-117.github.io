@@ -113,6 +113,17 @@ a {
 }
 
 /* Glassmorphism Panels */
+.reveal-hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal-hidden.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .glass-panel {
     background: var(--glass-bg);
     backdrop-filter: blur(12px);
@@ -738,7 +749,8 @@ nav ul {
     gap: 8px;
     max-height: 250px;
     overflow-y: auto;
-    scrollbar-gutter: stable; /* Réserve l'espace de la scrollbar pour éviter le saut de texte */
+    scrollbar-gutter: stable;
+    /* Réserve l'espace de la scrollbar pour éviter le saut de texte */
     padding-right: 5px;
 }
 
@@ -746,10 +758,12 @@ nav ul {
 .module-tags::-webkit-scrollbar {
     width: 6px;
 }
+
 .module-tags::-webkit-scrollbar-track {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 3px;
 }
+
 .module-tags::-webkit-scrollbar-thumb {
     background: var(--color-cortana-cyan);
     border-radius: 3px;
